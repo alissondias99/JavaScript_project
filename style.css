@@ -1,0 +1,48 @@
+#center {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Exemplo: altura da viewport */
+}
+
+/*Cria um lista horizontal*/
+.menu-horizontal ul {
+    list-style: none; /* Remove as bolinhas */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-horizontal li {
+    display: inline-block;/* Coloca os itens lado a lado */
+    margin-right: 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilo básico para visualização */
+.tab {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.titulo {
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+
+/* Por padrão, esconda o conteúdo de todos os itens */
+.conteudo {
+    display: none;
+    padding: 15px;
+}
+
+/* Se o tab tiver a classe 'active', mostre o conteúdo dele */
+.tab.active .conteudo {
+    display: block;
+}
+
+/* Remove o titulo do elemento ativo */
+.tab.active .titulo {
+    display: none;
+}

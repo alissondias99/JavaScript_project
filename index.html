@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id = center>
+        <nav class=menu-horizontal>
+            <ul>
+                <li>
+                    <div class="tab active">
+                        <div class="titulo">Clique aqui - tab 1</div>
+                        <div class="conteudo">
+                            <p>Este é o texto do primeiro elemento que está visível.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tab">
+                        <div class="titulo">Clique aqui - tab 2</div>
+                        <div class="conteudo">
+                            <p>Este conteúdo estava oculto e agora apareceu.</p>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li>
+                    <div class="tab">
+                        <div class="titulo">Clique aqui - tab 3</div>
+                        <div class="conteudo">
+                            <p>Texto do terceiro elemento.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+
+        var tabs = document.querySelectorAll('.tab '); // seleciona todos os elementos com classe tab
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => { // define o elemento tab como sendo o elemento que foi clicado
+
+                tabs.forEach(t => {
+                    t.classList.remove('active') // depois percorre cada elemento tabs e remove a classe active do que tem ela
+                });
+
+                tab.classList.add('active') // depois de percorrer os elementos, adiciona o active ao elemento clicado
+
+            });
+        });
+
+    </script>
+</body>
+
+</html>
